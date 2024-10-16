@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function() {
 })
 
 
-       //     reviews changing in 3 secpnds
+       //     reviews changing in 3 seconds
 
        const reviews = document.querySelectorAll('.review');
 let currentReview = 0;
@@ -116,29 +116,30 @@ setInterval(showNextReview, 3000);
 
 // thats gonna be when i scroll cards photos etc animate scroll
 
- document.addEventListener("DOMContentLoaded", () => {
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting){
-            entry.target.classList.add('show');
-        }
-    });
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              // Shto klasën 'show' kur elementi është i dukshëm
+              entry.target.classList.add('show');
+          } else {
+              // Hiq klasën 'show' kur elementi nuk është më i dukshëm
+              entry.target.classList.remove('show');
+          }
+      });
+  }, { threshold: 0.2 });
 
+  const cards = document.querySelectorAll('.card');
+  const paragraphs = document.querySelectorAll('p');
+  const headers = document.querySelectorAll('h3');
+  const galeryItems = document.querySelectorAll('.galery-items');
 
-},{ threshold: 0.1});
+  // I vëzhgojmë të gjitha elementet me observer
+  cards.forEach(card => observer.observe(card));
+  paragraphs.forEach(p => observer.observe(p));
+  headers.forEach(h3 => observer.observe(h3));
+  galeryItems.forEach(item => observer.observe(item));
+});
 
-
-
- const cards = document.querySelectorAll('.card');
- const paragraphs = document.querySelectorAll('p');
- const headers = document.querySelectorAll('h3');
- const galeryItems = document.querySelectorAll('.galery-item');
-
- // I vëzhgojmë të gjitha elementet me observer
- cards.forEach(card => observer.observe(card));
- paragraphs.forEach(p => observer.observe(p));
- headers.forEach(h3 => observer.observe(h3));
- galeryItems.forEach(item => observer.observe(item));
-}); 
 
 
