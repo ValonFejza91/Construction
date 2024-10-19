@@ -71,12 +71,20 @@ padding-top: 0;
     height: 80px;
     
 } */
+
  nav{
 
 
 justify-content: space-between;
 z-index: 1100;
  }
+#menu-btn{
+  font-size: 26px;
+  color: white;
+  width: 100%;
+  display: ;
+}
+
 
 nav ul{
     display: flex;
@@ -733,7 +741,8 @@ width: 100%;
 #header{
   justify-content: space-between;
   width: 100%;
-height:auto;
+  height:8%;
+
 
 }
 #header .logo{
@@ -741,6 +750,9 @@ height:auto;
   height: 30px;
   position: relative;
 left: -3px;
+}
+.wrapper{
+  margin-top: 20%;
 }
 .Leistungen-img{
   display: none;
