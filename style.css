@@ -9,7 +9,8 @@
     
 }
 .body{
-    width: 1200px;
+    width:100%;
+    max-width: 1200px;
     align-items: center;
     justify-content: center;
     
@@ -265,15 +266,17 @@ section{
     width: 100%;
     display:flex;
     margin-top: 5%;
+ justify-content: center;
 
 
 }
 .photo-galery{
     display: grid;
+    position: relative;
   grid-template-columns:  1fr 1fr 1fr ;
     gap: 10px;
-    padding-top:225px;
-    margin: 0 auto;
+   padding-top: 20%;
+  left: -10%;
 }
 /*             prova */
 
@@ -690,4 +693,110 @@ transition: ease 0.2s;
 transform: scale(1.1);
 background-color: rgb(50, 138, 44);
 color: white;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 535px){
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+.body{
+width: 100%;
+}
+
+
+
+.nav ul{
+  display: none;
+
+} 
+
+
+#header{
+  justify-content: space-between;
+  width: 100%;
+height:auto;
+
+}
+#header .logo{
+  width: 40px;
+  height: 30px;
+  position: relative;
+left: -3px;
+}
+.Leistungen-img{
+  display: none;
+ }
+ h3.galery,.galery-img{
+  display: none;
+ }
+
+ .Staff-img{display: none;
+}
+#Galery{
+  width: 100%;
+
+} 
+
+
+.galery{
+  display: flex;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+ 
+}
+
+
+.photo-galery{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0;
+  margin: 0;
+  
+ 
+}
+.photo-galery img{
+  width: 200px;
+  height: 100px;
+  margin-left: 0px;
+}
+
+.galery h3{
+  display: inline;
+  margin-bottom: 30%;
+}
+
+.card-container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20%;
+}
+
+
+
+.staff-container{
+  display: flex;
+flex-direction: column;
+}
+
+
 }
