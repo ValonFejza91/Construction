@@ -191,6 +191,7 @@ transform: scale(1)  ;
  .text h3, .text p, .text button {
     opacity: 0;
     transform: translateY(100px);
+    
     transition: opacity 0.9s ease, transform 0.8s ease;
  }
 
@@ -209,7 +210,7 @@ margin-top: 30px;
   
     width:10%;
     height:40px;
-    top: 50px;
+    top: 40px;
     border: 5px outset #4aec95;
     border-radius: 0px 15px 0px 15px;
     background-color: #dee9e4;
@@ -253,7 +254,7 @@ margin-top: 30px;
  .text button.show{
     opacity: 1;
     transform: translateY(0);
-    transition-delay: 0.8s;
+    transition-delay: 0.9s;
  }
 
 .main{
@@ -566,6 +567,7 @@ h3.Staff {
     transition: transform 0.3s, box-shadow 0.3s;
   }
   
+  
   .staff-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -811,4 +813,55 @@ flex-direction: column;
 }
 
 
+.image-container{
+  width: 100%;
+  height: 250px;
 }
+.text{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top:2;
+  padding: 0;
+  
+}
+.text button{
+
+
+}
+
+h3.title {
+ font-size:25px;
+ margin: 0;
+}
+.text p{
+  margin-top: 10px;
+ 
+
+}
+.text h3, .text p, .text button {
+  opacity: 0;
+  transform: translateX(100px);
+  
+  transition: opacity 0.9s ease, transform 0.8s ease;
+}
+
+
+
+
+
+.staff-card {
+  opacity: 0;
+  transform: translateY(100px);
+  
+  transition: opacity 0.9 ease, transform 0.9s ease;
+}
+
+
+.staff-card.show{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+}
+

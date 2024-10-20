@@ -113,10 +113,13 @@ setInterval(showNextReview, 3000);
 
 
 
+//version i gjate ky 
+
+
 
 // thats gonna be when i scroll cards photos etc animate scroll
 
-document.addEventListener("DOMContentLoaded", () => {
+/* document.addEventListener("DOMContentLoaded", () => {
   const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -133,12 +136,32 @@ document.addEventListener("DOMContentLoaded", () => {
   const paragraphs = document.querySelectorAll('p');
   const headers = document.querySelectorAll('h3');
   const galeryItems = document.querySelectorAll('.galery-items');
+  const staffCard = document.querySelectorAll('.staff-card');
+  const staffCard1 = document.querySelectorAll('.staff-card1')
+
 
   // I vëzhgojmë të gjitha elementet me observer
   cards.forEach(card => observer.observe(card));
   paragraphs.forEach(p => observer.observe(p));
   headers.forEach(h3 => observer.observe(h3));
   galeryItems.forEach(item => observer.observe(item));
+  staffCard.forEach(card => observer.observe(card));
+  staffCard1.forEach(card1 => observer.observe(card1));
+
+}); */
+
+
+// versioni me i shkurt se lart per scroll te elementev
+
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      entry.target.classList.toggle('show', entry.isIntersecting);
+    });
+  }, { threshold: 0.2 });
+
+  const elements = document.querySelectorAll('.card, p, h3, .galery-items, .staff-card, .staff-card1');
+  elements.forEach(element => observer.observe(element));
 });
 
 
